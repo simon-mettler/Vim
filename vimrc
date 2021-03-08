@@ -4,6 +4,8 @@ syntax on
 
 set noshowmode
 
+set incsearch
+
 " set showcmd
 
 set mouse=a
@@ -73,4 +75,3 @@ inoremap {<cr> {<cr>}<ESC>kA<CR>
 inoremap { {}<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
-
