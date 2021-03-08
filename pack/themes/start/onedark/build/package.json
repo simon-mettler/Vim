@@ -5,9 +5,7 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "test": "eslint build.js && node build.js check",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "test": "eslint build.js && node build.js check"
   },
   "author": {
     "name": "Josh Dick",
@@ -20,17 +18,15 @@
     "url": "https://github.com/joshdick/onedark.vim.git"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "husky": "^4.2.3"
+    "eslint": "^7.14.0",
+    "husky": "^4.3.0"
   },
   "dependencies": {
-    "termcolors": "latest",
-    "snyk": "^1.316.1"
+    "termcolors": "0.7.2"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm test"
     }
-  },
-  "snyk": true
+  }
 }
