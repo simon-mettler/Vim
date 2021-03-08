@@ -368,7 +368,7 @@ function! s:UI.saveScreenState()
         call g:NERDTree.CursorToTreeWin()
         let self._screenState['oldPos'] = getpos('.')
         let self._screenState['oldTopLine'] = line('w0')
-        let self._screenState['oldWindowSize']= winwidth('')
+        let self._screenState['oldWindowSize'] = winnr('$')==1 ? g:NERDTreeWinSize : winwidth('')
         call nerdtree#exec(win . 'wincmd w', 1)
     catch
     endtry
@@ -516,8 +516,7 @@ endfunction
 " zoom (maximize/minimize) the NERDTree window
 function! s:UI.toggleZoom()
     if exists('b:NERDTreeZoomed') && b:NERDTreeZoomed
-        let size = exists('b:NERDTreeOldWindowSize') ? b:NERDTreeOldWindowSize : g:NERDTreeWinSize
-        call nerdtree#exec('silent vertical resize '. size, 1)
+        call nerdtree#exec('silent vertical resize '. g:NERDTreeWinSize, 1)
         let b:NERDTreeZoomed = 0
     else
         call nerdtree#exec('vertical resize '. get(g:, 'NERDTreeWinSizeMax', ''), 1)
