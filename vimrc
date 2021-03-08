@@ -32,6 +32,8 @@ packadd lightline
 
 packadd vimjavascript
 
+packadd supertab 
+
 set laststatus=2
 
 packadd nerdtree
