@@ -6,6 +6,10 @@ set noshowmode
 
 set incsearch
 
+" tab completion
+set wildmode=longest,list,full
+set wildmenu
+
 " set showcmd
 
 set mouse=a
