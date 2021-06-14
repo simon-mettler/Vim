@@ -18,12 +18,14 @@ set encoding=utf-8
 
 set t_Co=256
 
+" Indentation
 filetype indent on
-
 set autoindent
-
+set noexpandtab 
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=0
+set softtabstop=0
+set smarttab
 
 packadd onedark
 colorscheme onedark
@@ -50,11 +52,11 @@ set cursorline
 
 set clipboard=unnamed
 
+" KEY MAPPING
+
 " Change leader key
 nnoremap <SPACE> <Nop>
 let mapleader = " "
-
-" KEY MAPPING
 
 " Basic
 imap kj <Esc>
