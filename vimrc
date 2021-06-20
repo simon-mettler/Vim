@@ -4,7 +4,10 @@ syntax on
 
 set noshowmode
 
+" search
 set incsearch
+set hlsearch
+set ignorecase
 
 " tab completion
 set wildmode=longest,list,full
@@ -42,7 +45,6 @@ packadd nerdtree
 
 set number
 
-set hlsearch
 
 set showmatch
 
@@ -66,7 +68,7 @@ nnoremap <leader>s :update<cr>
 nnoremap tt :NERDTreeToggle<cr>
 
 " Tabs
-nnoremap tn :tabnew<cr>
+nnoremap :tn :tabnew<cr>.
 nnoremap td :tabclose<cr>
 nnoremap tk :tabnext<cr>
 nnoremap tj :tabprev<cr>
